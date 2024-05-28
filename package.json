@@ -1,5 +1,5 @@
 {
-  "name": "@vueform/slider",
+  "name": "@oliver139/vueform-slider",
   "version": "2.1.10",
   "private": false,
   "description": "Vue 3 slider component with multihandles, tooltips merging and formatting.",
