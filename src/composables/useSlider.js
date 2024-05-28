@@ -56,12 +56,30 @@ export default function useSlider (props, context, dependencies)
       defaultOptions.connect = true
     }
 
-    if ((ariaLabelledby && ariaLabelledby.value) || (aria && Object.keys(aria.value).length)) {
-      let handles = Array.isArray(value.value) ? value.value : [value.value]
+    // if ((ariaLabelledby && ariaLabelledby.value) || (aria && Object.keys(aria.value).length)) {
+    if ((ariaLabelledby && ariaLabelledby.value) || (aria && aria.value)) {
+      const handles = Array.isArray(value.value) ? value.value : [value.value];
 
-      defaultOptions.handleAttributes = handles.map(h => (Object.assign({}, aria.value, ariaLabelledby && ariaLabelledby.value ? {
-        'aria-labelledby': ariaLabelledby.value,
-      }: {})))
+      defaultOptions.handleAttributes = handles.map((h, i) => {
+        const output = {};
+        if (aria.value) {
+          if (Array.isArray(aria.value)) {
+            Object.assign(output, aria.value[i]);
+          } else {
+            Object.assign(output, aria.value);
+          }
+        }
+        
+        if (ariaLabelledby.value) {
+          if (typeof ariaLabelledby.value === 'string') {
+            Object.assign(output, { 'aria-labelledby': ariaLabelledby.value });
+          } else {
+            Object.assign(output, { 'aria-labelledby': ariaLabelledby.value[i] });
+          }
+        }
+
+        return output;
+      });
     }
 
     if (format.value) {
