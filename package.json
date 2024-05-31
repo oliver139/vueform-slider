@@ -1,8 +1,8 @@
 {
   "name": "@oliver139/vueform-slider",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "private": false,
-  "description": "Vue 3 slider component with multihandles, tooltips merging and formatting.",
+  "description": "Revised Vueform Slider to support applying different aria-labels to handles respectively",
   "license": "MIT",
   "author": "Adam Berecz <adam@vueform.com>",
   "main": "./dist/slider.js",
@@ -26,10 +26,10 @@
   "sideEffects": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vueform/slider.git"
+    "url": "git+https://github.com/oliver139/vueform-slider"
   },
   "bugs": {
-    "url": "https://github.com/vueform/slider/issues"
+    "url": "https://github.com/oliver139/vueform-slider/issues"
   },
   "scripts": {
     "build": "npm run build:vue2; npm run build:vue3; npm run build:themes",
@@ -81,5 +81,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
+  ],
+  "contributors": [
+    {
+      "name": "Oliver Mak",
+      "email": "oliver139.working@gmail.com"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "Oliver Mak",
+      "email": "oliver139.working@gmail.com"
+    }
   ]
 }

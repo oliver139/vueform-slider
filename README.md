@@ -38,6 +38,10 @@
   <br>
 </div>
 
+## Copyright Notice
+
+This project is forked from [Vueform Slider](https://github.com/vueform/slider), which want to resolve the problem that aria-labels cannot be applied to slider handle separately.
+
 ## Sponsors
 
 <div align="center"><br>
